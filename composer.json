@@ -1,0 +1,22 @@
+{
+  "name": "viewflex/listo",
+  "description": "Extends the Ligero CRUD micro-framework for Laravel, adding dynamic contextual UI controls supporting complex search architectures.",
+  "keywords": ["laravel", "crud", "ui", "menus", "dropdowns", "rich-search", "query tools"],
+  "authors": [
+    {
+      "name": "Adam Sailor",
+      "email": "viewflex.contact@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "laravel/framework": "~5.2",
+    "viewflex/ligero": "~1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Viewflex\\Listo\\": "src/",
+      "Viewflex\\Listo\\Publish\\": "src/Publish/"
+    }
+  }
+}
