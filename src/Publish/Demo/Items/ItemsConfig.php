@@ -103,7 +103,10 @@ class ItemsConfig extends BasePublisherConfig
      */
     protected $controls = [
         'pagination'        => true,
-        'keyword_search'    => true
+        'breadcrumbs'       => true,
+        'query_menus'       => true,
+        'keyword_search'    => true,
+        'sort_menu'         => true
     ];
     
     /*
@@ -129,8 +132,50 @@ class ItemsConfig extends BasePublisherConfig
             'make'              =>  true,
             'context'           =>  'logical',
         ],
-        'use_page_number'   =>  true
+        'use_page_number'   =>  false
 
+    ];
+
+    /*
+    |--------------------------------------------------------------------------
+    | Breadcrumbs
+    |--------------------------------------------------------------------------
+    */
+
+    /**
+     * @var array
+     */
+    protected $breadcrumbs_config = [
+        'parameters'                =>  [
+            'category',
+            'subcategory',
+            'keyword'
+        ],
+        'scope'                     =>  'query',
+        'persist_sort'              =>  true,
+        'persist_view'              =>  true,
+        'show_home'                 =>  true,
+        'text_ending'               =>  false
+    ];
+
+    /*
+    |--------------------------------------------------------------------------
+    | Query Menus
+    |--------------------------------------------------------------------------
+    */
+
+    /**
+     * @var array
+     */
+    protected $query_menus_config = [
+        'menus'             => [
+            'category'          => ['scope' => 'query', 'type' => 'string', 'show_all' => true],
+            'subcategory'       => ['scope' => 'query', 'type' => 'string', 'show_all' => true],
+            'active'            => ['scope' => 'query', 'type' => 'boolean', 'show_all' => true]
+        ],
+        'persist_sort'      =>  true,
+        'persist_view'      =>  true,
+        'persist_keyword'   =>  false
     ];
     
     /*
@@ -182,6 +227,24 @@ class ItemsConfig extends BasePublisherConfig
         'list'      =>  5,
         'grid'      =>  20,
         'item'      =>  1
+    ];
+
+    /*
+    |--------------------------------------------------------------------------
+    |  Sort Menu
+    |--------------------------------------------------------------------------
+    */
+    
+    /**
+     * @var array
+     */
+    protected $sort_menu_sorts = [
+        'default',
+        'id',
+        'name',
+        'category',
+        'subcategory',
+        'price'
     ];
 
     /*
