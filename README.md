@@ -21,7 +21,7 @@ Quick-Links:
     - [Namespace for Custom Classes](#namespace-for-custom-classes)
 - [Tests](#tests)
 - [License](#license)
-- [Contributing](#contributing)
+- [Changelog](#changelog)
 
 ## Installation
 
@@ -41,7 +41,7 @@ Viewflex\Listo\ListoServiceProvider::class,
 
 ### Architecture
 
-This package extends the `viewflex/ligero` package, enhancing the Ligero BREAD micro-framework with additional dynamic UI controls supporting complex search architectures. It also has it's own demo implementation that includes the additional UI controls provided. This documentation should be viewed as a supplement to the official [Ligero Documentation](https://github.com/viewflex/ligero-docs).
+This package wraps the `viewflex/ligero` package, enhancing the Ligero BREAD micro-framework with additional dynamic UI controls supporting complex search architectures. It also has it's own demo implementation that includes the additional UI controls provided. This documentation should be viewed as a supplement to the official [Ligero Documentation](https://github.com/viewflex/ligero-docs).
 
 ### Live Demo
 
