@@ -15,15 +15,6 @@ class ListoServiceProvider extends ServiceProvider
 	{
 		$resource_namespace = 'listo';
 
-		/*
-    	|--------------------------------------------------------------------------
-    	| Set the Default Internal Namespace for Translations and Views
-    	|--------------------------------------------------------------------------
-    	*/
-
-		$this->loadTranslationsFrom(__DIR__ . '/Resources/lang', $resource_namespace);
-		$this->loadViewsFrom(__DIR__ . '/Resources/views', $resource_namespace);
-
         /*
         |--------------------------------------------------------------------------
         | Publish Routes File
@@ -33,6 +24,15 @@ class ListoServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/Publish/routes.php' => base_path('publish/viewflex/listo/routes.php')
         ], 'listo-routes');
+
+		/*
+    	|--------------------------------------------------------------------------
+    	| Set the Default Internal Namespace for Translations and Views
+    	|--------------------------------------------------------------------------
+    	*/
+
+		$this->loadTranslationsFrom(__DIR__ . '/Resources/lang', $resource_namespace);
+		$this->loadViewsFrom(__DIR__ . '/Resources/views', $resource_namespace);
         
 		/*
     	|--------------------------------------------------------------------------
@@ -96,7 +96,6 @@ class ListoServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-
         /*
     	|--------------------------------------------------------------------------
     	| Include the Routes File Published for Customization, if it exists.
@@ -106,8 +105,7 @@ class ListoServiceProvider extends ServiceProvider
         $published_routes = base_path('publish/viewflex/listo/routes.php');
         if (file_exists($published_routes))
             require $published_routes;
-        
-		
+
     }
 
 }

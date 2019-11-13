@@ -1,14 +1,20 @@
 <?php
 
 return [
-
+    
+    
     ## Characters or Abbreviations
 
     'symbol'                => [
         'null'                  => 'n/a',
         'range'                 => '~',
+        'separator'             => [
+            'breadcrumbs'           => ' &gt; ',
+            'titlecrumbs'           => ' > '
+        ]
     ],
 
+    
     ## General Labels for UI Controls
 
     'label'                 => [
@@ -34,6 +40,7 @@ return [
 
         'search'                => 'Search',
         'sort'                  => 'Sort',
+        'sort_by'               => 'Sort by',
         'all'                   => 'All',
         'select_all'            => 'Select All',
         'duplicate'             => 'Duplicate',
@@ -46,7 +53,7 @@ return [
         'errors'                => 'Error|Errors',
         'message'               => 'Message',
     ],
-
+    
 
     ## Current Results Page
 
@@ -58,7 +65,7 @@ return [
         'of'                    => 'of',
     ],
 
-
+    
     ## Nav
 
     'nav'                   => [
@@ -73,7 +80,7 @@ return [
         'per_page'              => 'per page',
         'view_as'               => 'View as',
     ],
-
+    
 
     ## Nav Tooltips
 
@@ -114,11 +121,12 @@ return [
         'data_modified'         => 'Data was modified, clearing previous query.'
     ],
 
+    
     ## Prompts
 
     'prompt'                => [
-        'confirm_delete' => 'Are you sure you want to delete? This cannot be reversed.',
-        'confirm_cancel' => 'Are you sure you want to cancel changes?',
+        'confirm_delete'        => 'Are you sure you want to delete? This cannot be reversed.',
+        'confirm_cancel'        => 'Are you sure you want to cancel changes?',
     ],
 
 
@@ -131,22 +139,55 @@ return [
     |
     */
 
-    ## Labels for columns and values
 
-    'id' => 'ID',
-    'active' => 'Active',
-    'name' => 'Name',
-    'category' => 'Category',
-    'subcategory' => 'Subcategory',
-    'description' => 'Description',
-    'created_at' => 'Created At',
-    'updated_at' => 'Updated At',
+    ## Labels for columns and values:
+
+    'id'                    => 'ID',
+    'active'                => 'Active',
+    'name'                  => 'Name',
+    'category'              => 'Category',
+    'subcategory'           => 'Subcategory',
+    'description'           => 'Description',
+    'created_at'            => 'Created At',
+    'updated_at'            => 'Updated At',
 
 
-    ## Strings for values of boolean fields
+    ## Strings for true and false values of boolean columns,
+    ## keyed by this format: column_name.{'_true'|'_false'}:
 
-    'active_true' => 'Active',
-    'active_false' => 'Inactive',
+    'active_true'           => 'Active',
+    'active_false'          => 'Inactive',
+
+
+    ## Text for 'All' choices in query menus:
+
+    'all'                   => [
+        'active'                => 'All',
+        'category'              => 'Categories',
+        'subcategory'           => 'Subcategories'
+    ],
+
+
+    ## Labels for named sorts defined in config:
+
+    'sorts'                 => [
+        'default'               => 'Default',
+        'id'                    => 'ID',
+        'active'                => 'Active',
+        'name'                  => 'Name',
+        'category'              => 'Category',
+        'subcategory'           => 'Subcategory',
+        'price'                 => 'Price',
+
+        'default-desc'          => 'Default (R)',
+        'id-desc'               => 'ID (R)',
+        'active-desc'           => 'Active (R)',
+        'name-desc'             => 'Name (R)',
+        'category-desc'         => 'Category (R)',
+        'subcategory-desc'      => 'Subcategory (R)',
+        'price-desc'            => 'Price (R)',
+    ]
+
 
 
 ];

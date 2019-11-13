@@ -14,6 +14,20 @@
                 </li>
             </ul>
 
+            @foreach ($query_dropdowns as $dropdown)
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        {!! $dropdown['dropdown'] !!}
+                    </li>
+                </ul>
+            @endforeach
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    {!! $sort_menu !!}
+                </li>
+            </ul>
+
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     {!! $view_menu !!}

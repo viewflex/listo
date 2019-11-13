@@ -6,8 +6,8 @@
 // UI Controller Routes:
 
 // Special actions...
-Route::get('listo/items/json', array('as' => 'listo.items.json', 'uses' => '\Viewflex\Listo\Demo\Items\ItemsController@json', 'middleware' => 'web'));
-Route::get('listo/items/action', array('as' => 'listo.items.action', 'uses' => '\Viewflex\Listo\Demo\Items\ItemsController@action', 'middleware' => 'web'));
+Route::get('listo/items/json', array('as' => 'listo.items.json', 'uses' => '\Viewflex\Listo\Publish\Demo\Items\ItemsController@json', 'middleware' => 'web'));
+Route::get('listo/items/action', array('as' => 'listo.items.action', 'uses' => '\Viewflex\Listo\Publish\Demo\Items\ItemsController@action', 'middleware' => 'web'));
 
 // Resourceful actions...
 Route::get('listo/items', array('as' => 'listo.items.index', 'uses' => '\Viewflex\Listo\Publish\Demo\Items\ItemsController@index', 'middleware' => 'web'));
